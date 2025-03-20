@@ -1,0 +1,151 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scrolling behavior for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom transitions for interactive elements */
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom hover effects for project cards */
+.project-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom animations for page elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Custom styles for form inputs */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.mobile-menu.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+/* Custom styles for active navigation links */
+.nav-link.active {
+    color: #3B82F6;
+    font-weight: 500;
+}
+
+/* Custom styles for section headings */
+.section-heading {
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background: #3B82F6;
+    border-radius: 2px;
+}
+
+/* Custom styles for contact form success/error messages */
+.form-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-message.success {
+    background-color: #DEF7EC;
+    color: #03543F;
+    border: 1px solid #84E1BC;
+}
+
+.form-message.error {
+    background-color: #FDE8E8;
+    color: #9B1C1C;
+    border: 1px solid #F8B4B4;
+}
+
+/* Dashboard card hover effects */
+.dashboard-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom loading spinner */
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3B82F6;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.875rem;
+    }
+}
